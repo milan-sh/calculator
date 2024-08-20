@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-teal-500 font-semibold">
+    <div class=" flex justify-center items-center h-screen w-screen">
+        <div class="calculator-container max-[640px]:w-9/12 h-3/4 sm:w-9/12 md:h-4/5 w-2/6 rounded-lg bg-white drop-shadow-2xl">
+            <div  class=" h-2/5 border-2 rounded-t-lg flex justify-end items-end p-6 text-6xl "><p id="screen" class="text-ellipsis overflow-hidden"></p></div>
+            <div class="keypad h-3/5  grid grid-cols-4 rounded-b-xl grid-rows-5 gap-0.5 " >
+                <button id="clear" class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 hover:bg-[#b1dfda]"  value="AC">AC</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 hover:bg-[#b1dfda]" value="DE">DE</button>
+                <button class="text-4xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 hover:bg-[#b1dfda]" value="%">%</button>
+                <button class="text-4xl font-medium flex items-center justify-center border-white cursor-pointer  bg-teal-100 font-semibold hover:bg-[#b1dfda]" value="+">+</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="1">1</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="2">2</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="3">3</button>
+                <button class="text-4xl font-medium flex items-center justify-center border-white cursor-pointer  bg-teal-100 font-semibold hover:bg-[#b1dfda]" value="-">–</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="4">4</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="5">5</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="6">6</button>
+                <button class="text-4xl font-medium flex items-center justify-center border-white cursor-pointer  bg-teal-100 font-semibold hover:bg-[#b1dfda]" value="*">x</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="7">7</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="8">8</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="9">9</button>
+                <button class="text-4xl font-medium flex items-center justify-center border-white cursor-pointer  bg-teal-100 font-semibold hover:bg-[#b1dfda]" value="/">/</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value="0">0</button>
+                <button class="text-2xl font-medium flex items-center justify-center border-white cursor-pointer  bg-slate-200 num hover:bg-[#b1dfda]" value=".">.</button>
+                <button class="text-2xl font-medium flex items-center justify-center col-span-2 border-white bg-teal-500 font-semibold text-6xl text-white cursor-pointer " value="=">=</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
