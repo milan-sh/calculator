@@ -5,32 +5,30 @@ function screenValue(input){
     screenEl.innerHTML += `${input}`;
 }
 
-//clear screen
-// const clearScreenButon = document.getElementById('clear')
-// clearScreenButon.addEventListener("click", (e)=>{
-//     // console.log(e.target.value)
-//     if(e.currentTarget.value = 'AC'){
-//         const x = ""
-//         screenValue(x)
-//     }
-// })
 
-//showing number on screen
-// console.log(Array.from(document.querySelectorAll('button')))
-
-
-//feeding input to the screen
 const buttonArray = Array.from(document.querySelectorAll('button'))
 buttonArray.forEach(element => {
     element.addEventListener('click', (e)=>{
+        e.preventDefault()
+        let result="";
         let inputValue = e.currentTarget.value
         if(inputValue == 'AC'){
-            console.log("yes it is ac")
-            const x = ""
-            screenValue(x)
-        }else{
+            screenEl.innerHTML = ""
+        }
+        else if(inputValue=="DE"){
+            let currentValue = screenEl.innerText
+            screenEl.innerHTML = currentValue.slice(0, -1)
+        }
+        else if(inputValue=="="){
+            if(screenEl.innerHTML == ""){
+                return
+            }else{
+                result = eval(screenEl.innerHTML)
+                screenEl.innerHTML = result
+            }
+        }
+        else{
             screenValue(inputValue)
         }
-        
     })
 });
